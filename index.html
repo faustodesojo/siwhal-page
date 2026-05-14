@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SIWHAL | Piedras de Afilar Profesionales</title>
   <meta name="description" content="Piedras de afilar profesionales Siwhal. Logra filos de estándar HHT con tecnología de doble cara y dientes diamantados."/>
+  <link rel="icon" type="image/png" href="assets/logo.png"/>
+  <meta property="og:title" content="SIWHAL | Piedras de Afilar Profesionales"/>
+  <meta property="og:description" content="Piedras de afilar profesionales Siwhal. Logra filos de estándar HHT con tecnología de doble cara y dientes diamantados."/>
+  <meta property="og:image" content="https://siwhal-page.vercel.app/assets/producto.png"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <link rel="stylesheet" href="styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 </head>
@@ -310,10 +316,10 @@
               Envío gratis a todo el país
             </div>
           </div>
-          <button class="shop-buy" style="margin-top:1.5rem;">
+          <a class="shop-buy" href="https://articulo.mercadolibre.com.ar/MLA-1769897145-piedra-de-afilar-profesional-siwhal-_JM" target="_blank" rel="noopener" style="margin-top:1.5rem;text-decoration:none;">
             <span class="material-symbols-outlined">shopping_cart</span>
             Comprar Ahora
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -335,12 +341,18 @@
         <span>Taller de Afilado Artesanal, Siwhal</span>
       </div>
     </div>
-    <form class="contact-form fade-up" id="contactForm">
-      <input type="text" placeholder="Nombre completo" required/>
-      <input type="email" placeholder="Correo electrónico" required/>
-      <textarea rows="4" placeholder="Tu mensaje o consulta técnica"></textarea>
+    <form class="contact-form fade-up" id="contactForm" action="https://formspree.io/f/mgodjkaw" method="POST">
+      <input type="hidden" name="_replyto" value="email"/>
+      <input type="hidden" name="_subject" value="Consulta desde siwhal-page"/>
+      <input type="text" name="nombre" placeholder="Nombre completo" required/>
+      <input type="email" name="email" placeholder="Correo electrónico" required/>
+      <textarea name="mensaje" rows="4" placeholder="Tu mensaje o consulta técnica"></textarea>
       <button type="submit" class="btn-dark" style="align-self:flex-start;">Enviar Consulta</button>
     </form>
+    <div id="formSuccess" style="display:none;padding:1.5rem;background:var(--surface);border-left:4px solid var(--primary);">
+      <p style="font-weight:600;margin-bottom:0.25rem;">¡Consulta enviada!</p>
+      <p style="font-size:0.9rem;color:var(--secondary);">Te responderemos a la brevedad.</p>
+    </div>
   </div>
 </section>
 </main>
@@ -354,22 +366,23 @@
     </div>
     <div>
       <h4>Enlaces Rápidos</h4>
-      <a href="#">Instagram</a>
-      <a href="#">WhatsApp</a>
+      <a href="https://www.instagram.com/siwhalpiedras/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@siwhalpiedrasdeafilar" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://wa.me/5492216158325?text=Hola!%20Tengo%20una%20consulta%20sobre%20las%20piedras" target="_blank" rel="noopener">WhatsApp</a>
       <a href="#">Políticas de Privacidad</a>
       <a href="#">Términos de Servicio</a>
     </div>
     <div>
-      <h4>Boletín</h4>
-      <p style="font-size:0.8rem;margin-bottom:0.75rem;">Recibe consejos técnicos sobre mantenimiento de filos.</p>
-      <div class="footer-newsletter">
-        <input type="email" placeholder="Email"/>
-        <button>UNIRSE</button>
-      </div>
+      <h4>Contacto Directo</h4>
+      <a href="https://wa.me/5492216158325?text=Hola!%20Tengo%20una%20consulta%20sobre%20las%20piedras" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+        <span class="material-symbols-outlined" style="font-size:1.1rem;color:var(--primary);">whatsapp</span>
+        WhatsApp
+      </a>
+      <p style="font-size:0.8rem;color:var(--secondary);">Respuesta rápida por WhatsApp</p>
     </div>
   </div>
   <div class="footer-bottom container">
-    <p>© 2024 Siwhal Piedras de Afilar. Todos los derechos reservados. El cambio de paradigma en el afilado.</p>
+    <p>© 2026 Siwhal Piedras de Afilar. Todos los derechos reservados. El cambio de paradigma en el afilado.</p>
   </div>
 </footer>
 
@@ -427,16 +440,33 @@ window.addEventListener('scroll', () => {
 btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // Contact form
-document.getElementById('contactForm').addEventListener('submit', (e) => {
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  alert('¡Gracias por tu consulta! Nos pondremos en contacto contigo pronto.');
-  e.target.reset();
+  const btn = contactForm.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+  try {
+    const resp = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      contactForm.style.display = 'none';
+      formSuccess.style.display = 'block';
+    } else {
+      alert('Error al enviar. Intentá de nuevo.');
+    }
+  } catch {
+    alert('Error de conexión. Verificá tu internet.');
+  }
+  btn.disabled = false;
+  btn.textContent = 'Enviar Consulta';
 });
 
-// Shop button
-document.querySelector('.shop-buy')?.addEventListener('click', () => {
-  alert('¡Gracias por tu interés! Serás redirigido al proceso de compra.');
-});
+
 </script>
 </body>
 </html>
