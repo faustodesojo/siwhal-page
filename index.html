@@ -421,6 +421,14 @@
   <span class="material-symbols-outlined">arrow_upward</span>
 </button>
 
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal">
+  <span class="close-modal material-symbols-outlined">close</span>
+  <button class="modal-prev material-symbols-outlined">chevron_left</button>
+  <img class="modal-content" id="modalImage">
+  <button class="modal-next material-symbols-outlined">chevron_right</button>
+</div>
+
 <script>
 // Mobile menu
 const toggle = document.getElementById('menuToggle');
@@ -528,7 +536,7 @@ contactForm.addEventListener('submit', async (e) => {
   submitBtn.disabled = false; submitBtn.textContent = 'Enviar Consulta';
 });
 
-// Carrusel + Modal
+// Modal
 const imageModal = document.getElementById('imageModal');
 const modalImage = document.getElementById('modalImage');
 const closeModal = document.querySelector('.close-modal');
@@ -594,20 +602,21 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   }
   prevBtn?.addEventListener('click', () => goTo(current - 1));
   nextBtn?.addEventListener('click', () => goTo(current + 1));
+  // Touch swipe
+  let touchStartX = 0;
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  carousel.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 40) {
+      diff > 0 ? nextBtn?.click() : prevBtn?.click();
+    }
+  }, { passive: true });
+
   goTo(0);
 });
 </script>
-
-<!-- Image Modal -->
-<div id="imageModal" class="image-modal">
-  <span class="close-modal material-symbols-outlined">close</span>
-  <button class="modal-prev material-symbols-outlined">chevron_left</button>
-  <img class="modal-content" id="modalImage">
-  <button class="modal-next material-symbols-outlined">chevron_right</button>
-</div>
-
-
-
 
 </body>
 </html>
