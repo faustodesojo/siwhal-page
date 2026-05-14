@@ -342,54 +342,6 @@
   </div>
 </section>
 
-<!-- Tienda -->
-<section class="shop-section" id="tienda">
-  <div class="container">
-    <div class="shop-header fade-up">
-      <div>
-        <h2>Tienda Oficial</h2>
-        <p>Adquiere hoy la herramienta definitiva.</p>
-      </div>
-    </div>
-    <div class="shop-products">
-
-      <div class="shop-product fade-up">
-        <div class="product-badge">EL CAMBIO DE PARADIGMA</div>
-        <div class="shop-carousel" data-carousel="piedra">
-          <div class="carousel-track">
-            <img alt="Piedra Siwhal" src="assets/piedra1.webp"/>
-            <img alt="Piedra Siwhal" src="assets/piedra2.webp"/>
-            <img alt="Piedra Siwhal" src="assets/piedra3.webp"/>
-          </div>
-          <button class="carousel-btn prev" data-carousel-btn="prev" aria-label="Anterior">&#10094;</button>
-          <button class="carousel-btn next" data-carousel-btn="next" aria-label="Siguiente">&#10095;</button>
-          <div class="carousel-dots" data-carousel-dots></div>
-        </div>
-        <div class="shop-info">
-          <h3>Piedra De Afilar Profesional Siwhal</h3>
-          <p>Piedra natural de doble cara + 2 dientes diamantados estratégicos para generar barrillo. La solución definitiva para un afilado de estándar HHT.</p>
-          <div class="shop-shipping">
-            <span class="material-symbols-outlined">local_shipping</span>
-            Envío gratis a todo el país
-          </div>
-          <a class="shop-buy" href="https://listado.mercadolibre.com.ar/_CustId_189866084?item_id=MLA3261909242&amp;category_id=MLA413465&amp;seller_id=189866084&amp;client=recoview-selleritems&amp;recos_listing=true" target="_blank" rel="noopener">
-            <span class="material-symbols-outlined">shopping_cart</span>
-            Ver en Mercado Libre
-          </a>
-        </div>
-        <div class="shop-specs">
-          <h3>Especificaciones</h3>
-          <ul>
-            <li><span class="spec-label">Marca</span><span>Siwhal</span></li>
-            <li><span class="spec-label">Sistema</span><span>Piedra Natural Doble Cara</span></li>
-            <li><span class="spec-label">Material</span><span>Piedra Natural de Alta Dureza</span></li>
-            <li><span class="spec-label">Extras</span><span>2 Dientes Diamantados</span></li>
-            <li><span class="spec-label">Uso</span><span>Todo tipo de herramientas de corte</span></li>
-          </ul>
-        </div>
-      </div>
-
-
 <!-- Contacto -->
 <section class="contact-section" id="contacto">
   <div class="container contact-grid">
@@ -580,6 +532,9 @@ contactForm.addEventListener('submit', async (e) => {
 const imageModal = document.getElementById('imageModal');
 const modalImage = document.getElementById('modalImage');
 const closeModal = document.querySelector('.close-modal');
+const modalPrev = document.querySelector('.modal-prev');
+const modalNext = document.querySelector('.modal-next');
+let modalContext = null;
 
 if (closeModal) {
   closeModal.addEventListener('click', () => imageModal.classList.remove('show'));
@@ -587,6 +542,23 @@ if (closeModal) {
     if (e.target === imageModal) imageModal.classList.remove('show');
   });
 }
+
+function modalNavigate(dir) {
+  if (!modalContext) return;
+  const { slides } = modalContext;
+  modalContext.current = (modalContext.current + dir + slides.length) % slides.length;
+  modalImage.src = slides[modalContext.current].src;
+}
+
+if (modalPrev) modalPrev.addEventListener('click', () => modalNavigate(-1));
+if (modalNext) modalNext.addEventListener('click', () => modalNavigate(1));
+
+document.addEventListener('keydown', (e) => {
+  if (!imageModal.classList.contains('show')) return;
+  if (e.key === 'Escape') imageModal.classList.remove('show');
+  if (e.key === 'ArrowLeft') modalNavigate(-1);
+  if (e.key === 'ArrowRight') modalNavigate(1);
+});
 
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   const track = carousel.querySelector('.carousel-track');
@@ -610,6 +582,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     if (e.target.closest('.carousel-btn') || e.target.closest('.carousel-dots')) return;
     if (slides[current]) {
       modalImage.src = slides[current].src;
+      modalContext = { slides, current };
       imageModal.classList.add('show');
     }
   });
@@ -628,7 +601,9 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
 <!-- Image Modal -->
 <div id="imageModal" class="image-modal">
   <span class="close-modal material-symbols-outlined">close</span>
+  <button class="modal-prev material-symbols-outlined">chevron_left</button>
   <img class="modal-content" id="modalImage">
+  <button class="modal-next material-symbols-outlined">chevron_right</button>
 </div>
 
 
