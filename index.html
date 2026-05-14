@@ -210,32 +210,45 @@
   </div>
 </section>
 
-<!-- Infografía -->
-<section class="infographic-section" id="infografia">
+<!-- Guía Profesional (Infografía + Técnica unificadas) -->
+<section class="guide-section" id="metodologia">
   <div class="container">
     <div class="section-header fade-up">
       <h2>Sistema Profesional Siwhal</h2>
       <div class="divider"></div>
     </div>
-    <div class="infographic-wrap fade-up">
-      <img alt="Infografía del sistema profesional de afilado Siwhal" src="assets/infografia.png"/>
-    </div>
-  </div>
-</section>
 
-<!-- Técnica -->
-<section id="metodologia">
-  <div class="container technique-grid">
-    <div class="technique-text fade-up">
-      <h2>Técnica de Círculos Concéntricos</h2>
-      <p>La extrema dureza de la piedra natural Siwhal permite la aplicación de movimientos circulares de alta fricción con fuerte presión lateral. Esta técnica, imposible en piedras blandas que se dañarían, acelera dramáticamente el proceso de afilado.</p>
-      <p>Demostrado en pruebas de campo, la técnica ha permitido alcanzar el estándar HHT en navajas "Gold Dollar" en tiempo récord, validando la superioridad técnica del sistema Siwhal sobre métodos tradicionales.</p>
+    <div class="guide-grid">
+      <div class="guide-text fade-up">
+        <h3>Técnica de Círculos Concéntricos</h3>
+        <p>La extrema dureza de la piedra natural Siwhal permite la aplicación de movimientos circulares de alta fricción con fuerte presión lateral. Esta técnica, imposible en piedras blandas que se dañarían, acelera dramáticamente el proceso de afilado.</p>
+        <p>Demostrado en pruebas de campo, la técnica ha permitido alcanzar el estándar HHT en navajas "Gold Dollar" en tiempo récord, validando la superioridad técnica del sistema Siwhal sobre métodos tradicionales.</p>
+      </div>
+
+      <div class="guide-gallery fade-up">
+        <figure>
+          <img alt="Kit profesional Siwhal" src="assets/kit profesional.png"/>
+          <figcaption>Kit Profesional Completo</figcaption>
+        </figure>
+        <figure>
+          <img alt="Técnica con la piedra Siwhal" src="assets/info-piedra.png"/>
+          <figcaption>Técnica de Afilado</figcaption>
+        </figure>
+        <figure>
+          <img alt="Dientes diamantados Siwhal" src="assets/dientes.png"/>
+          <figcaption>Dientes Diamantados</figcaption>
+        </figure>
+      </div>
     </div>
-    <div class="technique-visual fade-up">
-      <span class="material-symbols-outlined icon">cyclone</span>
-      <h3>Movimiento de Alta Fricción</h3>
-      <p>Círculos concéntricos que aprovechan la dureza inalterable de la superficie para un desbaste rápido y preciso.</p>
+
+    <div class="technique-visual fade-up" style="background-image:url('assets/piedra1.webp');">
+      <div class="technique-overlay">
+        <span class="material-symbols-outlined icon">cyclone</span>
+        <h3>Movimiento de Alta Fricción</h3>
+        <p>Círculos concéntricos que aprovechan la dureza inalterable de la superficie para un desbaste rápido y preciso.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -488,10 +501,9 @@ document.querySelectorAll('.fade-up').forEach((el) => {
 // Technique visual spin-in
 gsap.fromTo('.technique-visual', { opacity: 0, scale: 0.8, rotation: -5 }, { opacity: 1, scale: 1, rotation: 2, duration: 1.2, ease: 'back.out(1.5)', scrollTrigger: { trigger: '.technique-visual', start: 'top 80%' } });
 // Technique text slide
-gsap.fromTo('.technique-text', { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.technique-text', start: 'top 80%' } });
-
-// Infographic zoom-in
-gsap.fromTo('.infographic-wrap', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 1.2, ease: 'power2.out', scrollTrigger: { trigger: '.infographic-wrap', start: 'top 80%' } });
+gsap.fromTo('.guide-text', { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.guide-text', start: 'top 80%' } });
+gsap.fromTo('.guide-gallery figure', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: { trigger: '.guide-gallery', start: 'top 85%' } });
+gsap.fromTo('.technique-visual', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 1.2, ease: 'power2.out', scrollTrigger: { trigger: '.technique-visual', start: 'top 80%' } });
 
 // Specs table rows
 gsap.fromTo('.specs-table tbody tr', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out', scrollTrigger: { trigger: '.specs-table', start: 'top 80%' } });
