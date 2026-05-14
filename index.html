@@ -22,7 +22,6 @@
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
     <a class="nav-brand" href="#inicio">
-      <img alt="Siwhal Logo" src="assets/logo.png"/>
       <span>SIWHAL</span>
     </a>
     <div class="nav-links">
@@ -141,7 +140,6 @@
           <button class="carousel-btn prev" data-carousel-btn="prev" aria-label="Anterior">&#10094;</button>
           <button class="carousel-btn next" data-carousel-btn="next" aria-label="Siguiente">&#10095;</button>
           <div class="carousel-dots" data-carousel-dots></div>
-          <div class="magnifier-lens"></div>
         </div>
         <div class="shop-content">
           <div class="shop-info">
@@ -183,7 +181,6 @@
           <button class="carousel-btn prev" data-carousel-btn="prev" aria-label="Anterior">&#10094;</button>
           <button class="carousel-btn next" data-carousel-btn="next" aria-label="Siguiente">&#10095;</button>
           <div class="carousel-dots" data-carousel-dots></div>
-          <div class="magnifier-lens"></div>
         </div>
         <div class="shop-content">
           <div class="shop-info">
@@ -577,22 +574,38 @@ contactForm.addEventListener('submit', async (e) => {
   submitBtn.disabled = false; submitBtn.textContent = 'Enviar Consulta';
 });
 
-// Carrusel + Magnifier
+// Carrusel + Modal
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const closeModal = document.querySelector('.close-modal');
+
+if (closeModal) {
+  closeModal.addEventListener('click', () => imageModal.classList.remove('show'));
+  imageModal.addEventListener('click', (e) => {
+    if (e.target === imageModal) imageModal.classList.remove('show');
+  });
+}
+
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   const track = carousel.querySelector('.carousel-track');
   const slides = track.querySelectorAll('img');
   const prevBtn = carousel.querySelector('[data-carousel-btn="prev"]');
   const nextBtn = carousel.querySelector('[data-carousel-btn="next"]');
   const dotsContainer = carousel.querySelector('[data-carousel-dots]');
-  const lens = carousel.querySelector('.magnifier-lens');
   let current = 0;
 
   if (slides.length < 2) { prevBtn?.remove(); nextBtn?.remove(); }
 
-  slides.forEach((_, i) => {
+  slides.forEach((slide, i) => {
     const dot = document.createElement('span');
     dot.addEventListener('click', () => goTo(i));
     dotsContainer.appendChild(dot);
+    
+    // Open modal on click
+    slide.addEventListener('click', () => {
+      modalImage.src = slide.src;
+      imageModal.classList.add('show');
+    });
   });
   const dots = dotsContainer.querySelectorAll('span');
 
@@ -604,26 +617,17 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   prevBtn?.addEventListener('click', () => goTo(current - 1));
   nextBtn?.addEventListener('click', () => goTo(current + 1));
   goTo(0);
-
-  // Magnifier lens effect
-  if (lens) {
-    carousel.addEventListener('mousemove', (e) => {
-      const rect = carousel.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const currentImg = slides[current];
-      if (!currentImg) return;
-      lens.style.display = 'block';
-      lens.style.left = (x - 75) + 'px';
-      lens.style.top = (y - 75) + 'px';
-      const bgX = (x / rect.width) * 100;
-      const bgY = (y / rect.height) * 100;
-      lens.style.backgroundImage = 'url(' + currentImg.src + ')';
-      lens.style.backgroundPosition = bgX + '% ' + bgY + '%';
-    });
-    carousel.addEventListener('mouseleave', () => { lens.style.display = 'none'; });
-  }
 });
 </script>
+
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal">
+  <span class="close-modal material-symbols-outlined">close</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+
+
+
 </body>
 </html>
