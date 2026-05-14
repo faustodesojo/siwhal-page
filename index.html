@@ -13,6 +13,8 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <link rel="stylesheet" href="styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
@@ -383,9 +385,12 @@
       <textarea name="mensaje" rows="4" placeholder="Tu mensaje o consulta técnica"></textarea>
       <button type="submit" class="btn-dark" style="align-self:flex-start;">Enviar Consulta</button>
     </form>
-    <div id="formSuccess" style="display:none;padding:1.5rem;background:var(--surface);border-left:4px solid var(--primary);">
-      <p style="font-weight:600;margin-bottom:0.25rem;">¡Consulta enviada!</p>
-      <p style="font-size:0.9rem;color:var(--secondary);">Te responderemos a la brevedad.</p>
+    <div id="formSuccess" class="toast-success">
+      <span class="material-symbols-outlined icon">check_circle</span>
+      <div>
+        <p style="font-weight:600;margin-bottom:0.25rem;">¡Consulta enviada!</p>
+        <p style="font-size:0.9rem;color:var(--surface);">Te responderemos a la brevedad.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -460,11 +465,64 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Scroll animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+// GSAP Antigravity Animations
+gsap.registerPlugin(ScrollTrigger);
+
+// Hero elements parallax
+gsap.to('.hero-visual', {
+  y: -50,
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.hero',
+    start: 'top top',
+    end: 'bottom top',
+    scrub: true
+  }
+});
+
+// Staggered fade-up for cards and sections
+const fadeElements = document.querySelectorAll('.fade-up');
+fadeElements.forEach((el) => {
+  // Prevent double animation for items in grids
+  if (el.closest('.features-grid') || el.closest('.roi-grid') || el.closest('.diamonds-grid') || el.closest('.results-grid')) return;
+  
+  gsap.fromTo(el, 
+    { opacity: 0, y: 50, rotationX: 5 },
+    {
+      opacity: 1, 
+      y: 0, 
+      rotationX: 0,
+      duration: 1, 
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      }
+    }
+  );
+});
+
+// Staggered grid animations
+const grids = ['.features-grid', '.roi-grid', '.diamonds-grid', '.results-grid'];
+grids.forEach(grid => {
+  const cards = document.querySelectorAll(`${grid} > div`);
+  if (cards.length > 0) {
+    gsap.fromTo(cards,
+      { opacity: 0, y: 40, rotationY: -10 },
+      {
+        opacity: 1, y: 0, rotationY: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: grid,
+          start: 'top 80%',
+        }
+      }
+    );
+  }
+});
 
 // Back to top
 const btn = document.getElementById('backToTop');
@@ -488,8 +546,9 @@ contactForm.addEventListener('submit', async (e) => {
       headers: { 'Accept': 'application/json' }
     });
     if (resp.ok) {
-      contactForm.style.display = 'none';
-      formSuccess.style.display = 'block';
+      contactForm.reset();
+      formSuccess.classList.add('show');
+      setTimeout(() => formSuccess.classList.remove('show'), 4000);
     } else {
       alert('Error al enviar. Intentá de nuevo.');
     }
