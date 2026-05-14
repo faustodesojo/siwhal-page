@@ -136,6 +136,8 @@
             <img alt="Piedra Siwhal" src="assets/piedra1.webp"/>
             <img alt="Piedra Siwhal" src="assets/piedra2.webp"/>
             <img alt="Piedra Siwhal" src="assets/piedra3.webp"/>
+            <img alt="Piedra Siwhal Dientes" src="assets/dientes1.webp"/>
+            <img alt="Piedra Siwhal Dientes" src="assets/dientes2.webp"/>
           </div>
           <button class="carousel-btn prev" data-carousel-btn="prev" aria-label="Anterior">&#10094;</button>
           <button class="carousel-btn next" data-carousel-btn="next" aria-label="Siguiente">&#10095;</button>
@@ -600,14 +602,17 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     const dot = document.createElement('span');
     dot.addEventListener('click', () => goTo(i));
     dotsContainer.appendChild(dot);
-    
-    // Open modal on click
-    slide.addEventListener('click', () => {
-      modalImage.src = slide.src;
-      imageModal.classList.add('show');
-    });
   });
   const dots = dotsContainer.querySelectorAll('span');
+
+  // Open modal on click (bound to carousel so it works anywhere)
+  carousel.addEventListener('click', (e) => {
+    if (e.target.closest('.carousel-btn') || e.target.closest('.carousel-dots')) return;
+    if (slides[current]) {
+      modalImage.src = slides[current].src;
+      imageModal.classList.add('show');
+    }
+  });
 
   function goTo(index) {
     current = (index + slides.length) % slides.length;
