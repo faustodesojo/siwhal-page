@@ -180,7 +180,6 @@ section { padding: 5rem 0; position: relative; }
   border: var(--glass-border); box-shadow: var(--glass-shadow);
   border-radius: 20px; overflow: hidden;
   transform: rotateY(-10deg) rotateX(5deg);
-  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   will-change: transform;
 }
 .hero-img-wrap:hover { transform: rotateY(0deg) rotateX(0deg); }

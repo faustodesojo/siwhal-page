@@ -1,649 +1,730 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SIWHAL | Piedras de Afilar Profesionales</title>
-  <meta name="description" content="Piedras de afilar profesionales Siwhal. Logra filos de estándar HHT con tecnología de doble cara y dientes diamantados."/>
-  <link rel="icon" type="image/png" href="assets/logo.png"/>
-  <meta property="og:title" content="SIWHAL | Piedras de Afilar Profesionales"/>
-  <meta property="og:description" content="Piedras de afilar profesionales Siwhal. Logra filos de estándar HHT con tecnología de doble cara y dientes diamantados."/>
-  <meta property="og:image" content="https://siwhal-page.vercel.app/assets/producto.png"/>
-  <meta property="og:type" content="website"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <link rel="stylesheet" href="styles.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <meta name="description"
+    content="Piedras de afilar profesionales Siwhal. Logra filos de estándar HHT con tecnología de doble cara y dientes diamantados." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <meta property="og:title" content="SIWHAL | Piedras de Afilar Profesionales" />
+  <meta property="og:description"
+    content="Piedras de afilar profesionales Siwhal. Logra filos de estándar HHT con tecnología de doble cara y dientes diamantados." />
+  <meta property="og:image" content="https://siwhal-page.vercel.app/assets/producto.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-  <div class="navbar-inner">
-    <a class="nav-brand" href="#inicio">
-      <span>SIWHAL</span>
-    </a>
-    <div class="nav-links">
-      <a class="active" href="#inicio">Inicio</a>
-      <a href="#caracteristicas">Características</a>
-      <a href="#tienda">Tienda</a>
-      <a href="#metodologia">Técnica</a>
-      <a href="#informe">Informe</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-    <div style="display:flex;align-items:center;gap:1rem;">
-      <a class="btn-primary" href="https://listado.mercadolibre.com.ar/_CustId_189866084?item_id=MLA3261909242&amp;category_id=MLA413465&amp;seller_id=189866084&amp;client=recoview-selleritems&amp;recos_listing=true" target="_blank" rel="noopener">Comprar Ahora</a>
-      <button class="mobile-toggle" id="menuToggle" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#inicio">Inicio</a>
-  <a href="#caracteristicas">Características</a>
-  <a href="#tienda">Tienda</a>
-  <a href="#metodologia">Técnica</a>
-  <a href="#informe">Informe</a>
-  <a href="#contacto">Contacto</a>
-</div>
-
-<main>
-<!-- Hero -->
-<section class="hero" id="inicio">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <span class="label hero-label fade-up">Revolucionando el Afilado</span>
-      <h1 class="hero-title fade-up">Piedras de Afilar Profesionales Siwhal.</h1>
-      <p class="hero-desc fade-up">Logra filos muy agudos y pulidos sin rayar ni dañar el acero de tus herramientas. Únicas en el mercado. Un cambio de paradigma que ofrece un acabado de estándar HHT (corte de vellos en el aire).</p>
-      <div class="hero-ctas fade-up">
-        <a class="btn-dark" href="#tienda">Explorar Catálogo</a>
-        <div class="hero-badge">
-          <span class="material-symbols-outlined icon">verified</span>
-          Piedra Natural Garantizada
-        </div>
-      </div>
-    </div>
-    <div class="hero-visual fade-up">
-      <div class="hero-img-wrap">
-        <img alt="Piedra de afilar profesional Siwhal" src="assets/producto.png"/>
-      </div>
-      <div class="hero-float">
-        <span class="label">Estándar HHT</span>
-        <p>"El cambio de paradigma en el mantenimiento de herramientas de corte."</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Características -->
-<section class="features-section" id="caracteristicas">
-  <div class="container">
-    <div class="section-header fade-up">
-      <h2>Ingeniería en Piedra Natural</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card fade-up fade-up-delay-1">
-        <span class="material-symbols-outlined icon">layers</span>
-        <h3>Doble Cara</h3>
-        <p>Diseño de 2 caras que cubre casi todos los aspectos del afilado. Tamaño mediana/grande con 1.8 cm de espesor sólido. Rango de 600 a 12,000.</p>
-      </div>
-      <div class="feature-card fade-up fade-up-delay-2">
-        <span class="material-symbols-outlined icon">texture</span>
-        <h3>Cara Gruesa (Gris)</h3>
-        <span class="grit-badge">600 a 3000 GRIT</span>
-        <p>Ideal para semi desbaste y afilado medio, preparando el acero para la etapa final de precisión.</p>
-      </div>
-      <div class="feature-card fade-up fade-up-delay-3">
-        <span class="material-symbols-outlined icon">auto_awesome</span>
-        <h3>Cara Fina (Ultrafino)</h3>
-        <span class="grit-badge">3000 a 12000 GRIT</span>
-        <p>Afilado fino, pulido espejo y asentado. Logra el legendario estándar HHT (corte de vello en el aire).</p>
-      </div>
-      <div class="feature-card fade-up fade-up-delay-4">
-        <span class="material-symbols-outlined icon">diamond</span>
-        <h3>Dientes Diamantados</h3>
-        <p>Incluye 2 dientes diamantados: Oscuro (grueso) para la cara de 600 y Claro/Azul (fino) para la de 12,000. Generan "barrillo" para acelerar el proceso.</p>
-      </div>
-    </div>
-    <div class="callout fade-up">
-      <span class="material-symbols-outlined icon">shield</span>
-      <div>
-        <h4>Inmunidad a la Deformación: Optimización de CAPEX</h4>
-        <p>A diferencia de las piedras convencionales, Siwhal no requiere ser aplanada (no ahuecamiento). Su dureza extrema evita deformaciones, eliminando la necesidad de adquirir placas de aplanado.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Tienda (moved up) -->
-<section class="shop-section" id="tienda">
-  <div class="container">
-    <div class="shop-header fade-up">
-      <div>
-        <h2>Tienda Oficial</h2>
-        <p>Adquiere hoy la herramienta definitiva.</p>
-      </div>
-    </div>
-    <div class="shop-products">
-
-      <div class="shop-product fade-up">
-        <div class="product-badge">EL CAMBIO DE PARADIGMA</div>
-        <div class="shop-carousel" data-carousel="piedra">
-          <div class="carousel-track">
-            <img alt="Piedra Siwhal" src="assets/piedra1.webp"/>
-            <img alt="Piedra Siwhal" src="assets/piedra2.webp"/>
-            <img alt="Piedra Siwhal" src="assets/piedra3.webp"/>
-            <img alt="Piedra Siwhal Dientes" src="assets/dientes1.webp"/>
-            <img alt="Piedra Siwhal Dientes" src="assets/dientes2.webp"/>
-          </div>
-          <button class="carousel-btn prev" data-carousel-btn="prev" aria-label="Anterior">&#10094;</button>
-          <button class="carousel-btn next" data-carousel-btn="next" aria-label="Siguiente">&#10095;</button>
-          <div class="carousel-dots" data-carousel-dots></div>
-        </div>
-        <div class="shop-content">
-          <div class="shop-info">
-            <h3>Piedra De Afilar Profesional Siwhal</h3>
-            <p>Piedra natural de doble cara + 2 dientes diamantados estratégicos para generar barrillo. La solución definitiva para un afilado de estándar HHT.</p>
-            <div class="shop-shipping">
-              <span class="material-symbols-outlined">local_shipping</span>
-              Envío gratis a todo el país
-            </div>
-            <a class="shop-buy" href="https://listado.mercadolibre.com.ar/_CustId_189866084?item_id=MLA3261909242&amp;category_id=MLA413465&amp;seller_id=189866084&amp;client=recoview-selleritems&amp;recos_listing=true" target="_blank" rel="noopener">
-              <span class="material-symbols-outlined">shopping_cart</span>
-              Ver en Mercado Libre
-            </a>
-          </div>
-          <div class="shop-specs">
-            <h3>Especificaciones</h3>
-            <ul>
-              <li><span class="spec-label">Marca</span><span>Siwhal</span></li>
-              <li><span class="spec-label">Sistema</span><span>Piedra Natural Doble Cara</span></li>
-              <li><span class="spec-label">Material</span><span>Piedra Natural de Alta Dureza</span></li>
-              <li><span class="spec-label">Extras</span><span>2 Dientes Diamantados</span></li>
-              <li><span class="spec-label">Uso</span><span>Todo tipo de herramientas de corte</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="shop-product fade-up">
-        <div class="product-badge" style="background:var(--inverse-surface);">COLECCIÓN</div>
-        <div class="shop-carousel" data-carousel="navaja">
-          <div class="carousel-track">
-            <img alt="Navaja Lutz Cavalier" src="assets/navaja1.webp"/>
-            <img alt="Navaja Lutz Cavalier" src="assets/navaja2.webp"/>
-            <img alt="Navaja Lutz Cavalier" src="assets/navaja3.webp"/>
-            <img alt="Navaja Lutz Cavalier" src="assets/navaja4.webp"/>
-            <img alt="Navaja Lutz Cavalier" src="assets/navaja5.webp"/>
-            <img alt="Navaja Lutz Cavalier" src="assets/navaja6.webp"/>
-          </div>
-          <button class="carousel-btn prev" data-carousel-btn="prev" aria-label="Anterior">&#10094;</button>
-          <button class="carousel-btn next" data-carousel-btn="next" aria-label="Siguiente">&#10095;</button>
-          <div class="carousel-dots" data-carousel-dots></div>
-        </div>
-        <div class="shop-content">
-          <div class="shop-info">
-            <h3>Navaja De Afeitar Antigua</h3>
-            <p>Navaja barbera Lutz Cavalier número 14, fabricada entre los años 1920-1960 en la ciudad de Solingen Alemania.</p>
-            <p>Completamente nuevas, en su paquete original, nunca han sido usadas. Stock muy limitado.</p>
-            <a class="shop-buy" href="https://listado.mercadolibre.com.ar/_CustId_189866084?item_id=MLA3261909242&amp;category_id=MLA413465&amp;seller_id=189866084&amp;client=recoview-selleritems&amp;recos_listing=true" target="_blank" rel="noopener">
-              <span class="material-symbols-outlined">shopping_cart</span>
-              Ver en Mercado Libre
-            </a>
-          </div>
-          <div class="shop-specs">
-            <h3>Especificaciones</h3>
-            <ul>
-              <li><span class="spec-label">Fabricante</span><span>Solingen, Alemania</span></li>
-              <li><span class="spec-label">Marca</span><span>Lutz Cavalier</span></li>
-              <li><span class="spec-label">Modelo</span><span>14</span></li>
-              <li><span class="spec-label">Condición</span><span>Nueva - Packaging original</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Guía Profesional (Infografía + Técnica unificadas) -->
-<section class="guide-section" id="metodologia">
-  <div class="container">
-    <div class="section-header fade-up">
-      <h2>Sistema Profesional Siwhal</h2>
-      <div class="divider"></div>
-    </div>
-
-    <div class="guide-grid">
-      <div class="guide-text fade-up">
-        <h3>Técnica de Círculos Concéntricos</h3>
-        <p>La extrema dureza de la piedra natural Siwhal permite la aplicación de movimientos circulares de alta fricción con fuerte presión lateral. Esta técnica, imposible en piedras blandas que se dañarían, acelera dramáticamente el proceso de afilado.</p>
-        <p>Demostrado en pruebas de campo, la técnica ha permitido alcanzar el estándar HHT en navajas "Gold Dollar" en tiempo récord, validando la superioridad técnica del sistema Siwhal sobre métodos tradicionales.</p>
-      </div>
-
-            <div class="technique-visual-side fade-up">
-        <img src="assets/piedra1.webp" alt="Piedra Siwhal Alta Fricción" class="technique-img-side" />
-        <div class="technique-text-side">
-          <span class="material-symbols-outlined icon">cyclone</span>
-          <div>
-            <h4>Movimiento de Alta Fricción</h4>
-            <p>Círculos concéntricos que aprovechan la dureza inalterable de la superficie para un desbaste rápido y preciso.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="guide-gallery guide-gallery-large fade-up">
-      <figure>
-        <img alt="Kit profesional Siwhal" src="assets/kit profesional.png"/>
-        <figcaption>Kit Profesional Completo</figcaption>
-      </figure>
-      <figure>
-        <img alt="Técnica con la piedra Siwhal" src="assets/info-piedra.png"/>
-        <figcaption>Técnica de Afilado</figcaption>
-      </figure>
-      <figure>
-        <img alt="Dientes diamantados Siwhal" src="assets/dientes.png"/>
-        <figcaption>Dientes Diamantados</figcaption>
-      </figure>
-      <div class="divider"></div>
-    </div>
-    <div class="roi-grid">
-      <div class="roi-card fade-up fade-up-delay-1">
-        <span class="material-symbols-outlined icon">savings</span>
-        <h3>Optimización de CAPEX</h3>
-        <p>Reducción drástica de la inversión inicial al eliminar la necesidad de comprar granos intermedios y herramientas de rectificación.</p>
-      </div>
-      <div class="roi-card fade-up fade-up-delay-2">
-        <span class="material-symbols-outlined icon">inventory_2</span>
-        <h3>Logística Simplificada</h3>
-        <p>La caja de madera robusta minimiza la huella física en el puesto de trabajo y facilita el transporte.</p>
-      </div>
-      <div class="roi-card fade-up fade-up-delay-3">
-        <span class="material-symbols-outlined icon">timer</span>
-        <h3>Eliminación de Tiempos Muertos</h3>
-        <p>Se erradica el proceso improductivo de aplanado. El profesional dedica el 100% de su tiempo al cliente.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Dientes Diamantados -->
-<section class="diamonds-section" id="diamantes">
-  <div class="container">
-    <div class="section-header fade-up">
-      <h2>Sustentabilidad con Dientes Diamantados</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="diamonds-grid">
-      <div class="diamond-card fade-up fade-up-delay-1">
-        <span class="material-symbols-outlined icon">cleaning_services</span>
-        <h3>Limpieza y Restauración</h3>
-        <p>Dientes oscuros (gruesos) para la cara 600 y celestes (finos) para la cara 12,000. Eliminan la cristalización.</p>
-      </div>
-      <div class="diamond-card fade-up fade-up-delay-2">
-        <span class="material-symbols-outlined icon">speed</span>
-        <h3>Creación de "Barrillo"</h3>
-        <p>Se genera una suspensión abrasiva que aumenta drásticamente los puntos de corte activos por cm².</p>
-      </div>
-      <div class="diamond-card fade-up fade-up-delay-3">
-        <span class="material-symbols-outlined icon">build</span>
-        <h3>Protocolo de Mantenimiento</h3>
-        <p>Versatilidad total: funciona en seco, con agua como lubricante o mediante aceite mineral.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Especificaciones Técnicas -->
-<section class="specs-section" id="especificaciones" style="padding-top: 0;">
-  <div class="container">
-    <div class="section-header fade-up">
-      <h2>Especificaciones Técnicas</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="specs-wrapper fade-up">
-      <table class="specs-table">
-        <thead>
-          <tr>
-            <th>Característica</th>
-            <th>Especificación Técnica</th>
-            <th>Ventaja Operativa</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Característica">Rango de Granulometría</td>
-            <td data-label="Especificación">600 (Gris) a 12,000 (Ultrafino)</td>
-            <td data-label="Ventaja">Versatilidad total de desbaste y pulido.</td>
-          </tr>
-          <tr>
-            <td data-label="Característica">Estabilidad Estructural</td>
-            <td data-label="Especificación">Composición de alta densidad</td>
-            <td data-label="Ventaja">Inmunidad a deformación; sin rectificado.</td>
-          </tr>
-          <tr>
-            <td data-label="Característica">Ergonomía de Campo</td>
-            <td data-label="Especificación">13 - 14 cm</td>
-            <td data-label="Ventaja">Optimizadas para portabilidad y control.</td>
-          </tr>
-          <tr>
-            <td data-label="Característica">Protección de Activos</td>
-            <td data-label="Especificación">Caja de madera robusta</td>
-            <td data-label="Ventaja">Almacenamiento seguro, previene fracturas.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- Resultados -->
-<section class="results-section" id="resultados">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="label" style="display:block;margin-bottom:0.5rem;">Resultados Estratégicos</span>
-      <h2>Precisión Extrema: Estándar HHT</h2>
-    </div>
-    <p class="fade-up" style="text-align:center;max-width:700px;margin:0 auto 1rem;">El nivel de afilado alcanzado permite superar los estándares convencionales y alcanzar la validación definitiva: el "corte de cabello en el aire" (Hanging Hair Test).</p>
-    <div class="results-grid">
-      <div class="result-card fade-up fade-up-delay-1">
-        <div class="number">↑ ROI</div>
-        <h3>Eficiencia Temporal Crítica</h3>
-        <p>Reducción drástica de los ciclos de mantenimiento, permitiendo mayor rotación de servicios por jornada.</p>
-      </div>
-      <div class="result-card fade-up fade-up-delay-2">
-        <div class="number">-80%</div>
-        <h3>Costos de Capital</h3>
-        <p>Eliminación de inventario redundante y supresión del costo de reemplazo de accesorios de rectificación.</p>
-      </div>
-      <div class="result-card fade-up fade-up-delay-3">
-        <div class="number">HHT</div>
-        <h3>Calidad Superior</h3>
-        <p>Capacidad constante de ejecutar cortes "en el aire", elevando el valor percibido del servicio y satisfacción del cliente.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contacto -->
-<section class="contact-section" id="contacto">
-  <div class="container contact-grid">
-    <div class="contact-info fade-up">
-      <h2>Contáctanos</h2>
-      <p>¿Tienes dudas sobre la técnica de afilado o quieres saber más sobre nuestras piedras naturales? Nuestro equipo de maestros afiladores está listo para asesorarte.</p>
-      <div class="contact-detail">
-        <span class="material-symbols-outlined icon">mail</span>
-        <span>contacto@siwhal.com</span>
-      </div>
-      <div class="contact-detail">
-        <span class="material-symbols-outlined icon">location_on</span>
-        <span>Taller de Afilado Artesanal, Siwhal</span>
-      </div>
-    </div>
-    <form class="contact-form fade-up" id="contactForm" action="https://formspree.io/f/mgodjkaw" method="POST">
-      <input type="hidden" name="_subject" value="Consulta desde siwhal-page"/>
-      <input type="text" name="_gotcha" style="display:none"/>
-      <input type="text" name="nombre" placeholder="Nombre completo" required/>
-      <input type="email" name="email" placeholder="Correo electrónico" required/>
-      <textarea name="mensaje" rows="4" placeholder="Tu mensaje o consulta técnica"></textarea>
-      <button type="submit" class="btn-dark" style="align-self:flex-start;">Enviar Consulta</button>
-    </form>
-    <div id="formSuccess" class="toast-success">
-      <span class="material-symbols-outlined icon">check_circle</span>
-      <div>
-        <p style="font-weight:600;margin-bottom:0.25rem;">¡Consulta enviada!</p>
-        <p style="font-size:0.9rem;color:var(--surface);">Te responderemos a la brevedad.</p>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <div class="footer-brand">SIWHAL</div>
-      <p>Elevando el acto utilitario del afilado a una disciplina de alta precisión y arte.</p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/siwhalpiedras/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@siwhalpiedrasdeafilar" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </a>
-        <a href="https://wa.me/5492216158325?text=Hola!%20Tengo%20una%20consulta%20sobre%20las%20piedras" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </a>
-      </div>
-    </div>
-    <div>
-      <h4>Enlaces Rápidos</h4>
-      <a href="#caracteristicas">Características</a>
-      <a href="#tienda">Tienda</a>
-      <a href="#metodologia">Técnica</a>
-      <a href="#informe">Informe</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-    <div>
-      <h4>Contacto Directo</h4>
-      <a href="https://wa.me/5492216158325?text=Hola!%20Tengo%20una%20consulta%20sobre%20las%20piedras" target="_blank" rel="noopener" class="footer-whatsapp">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Escribinos por WhatsApp
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a class="nav-brand" href="#inicio">
+        <span>SIWHAL</span>
       </a>
-      <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:0.5rem;">Respuesta rápida</p>
+      <div class="nav-links">
+        <a class="active" href="#inicio">Inicio</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#metodologia">Técnica</a>
+        <a href="#informe">Informe</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <a class="btn-primary"
+          href="https://listado.mercadolibre.com.ar/_CustId_189866084?item_id=MLA3261909242&amp;category_id=MLA413465&amp;seller_id=189866084&amp;client=recoview-selleritems&amp;recos_listing=true"
+          target="_blank" rel="noopener">Comprar Ahora</a>
+        <button class="mobile-toggle" id="menuToggle" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#inicio">Inicio</a>
+    <a href="#caracteristicas">Características</a>
+    <a href="#tienda">Tienda</a>
+    <a href="#metodologia">Técnica</a>
+    <a href="#informe">Informe</a>
+    <a href="#contacto">Contacto</a>
   </div>
-  <div class="footer-bottom container">
-    <p>© 2026 Siwhal Piedras de Afilar. Todos los derechos reservados.</p>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="label hero-label fade-up">Revolucionando el Afilado</span>
+          <h1 class="hero-title fade-up">Piedras de Afilar Profesionales Siwhal.</h1>
+          <p class="hero-desc fade-up">Logra filos muy agudos y pulidos sin rayar ni dañar el acero de tus herramientas.
+            Únicas en el mercado. Un cambio de paradigma que ofrece un acabado de estándar HHT (corte de vellos en el
+            aire).</p>
+          <div class="hero-ctas fade-up">
+            <a class="btn-dark" href="#tienda">Explorar Catálogo</a>
+            <div class="hero-badge">
+              <span class="material-symbols-outlined icon">verified</span>
+              Piedra Natural Garantizada
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual fade-up">
+          <div class="hero-img-wrap">
+            <img alt="Piedra de afilar profesional Siwhal" src="assets/producto.png" />
+          </div>
+          <div class="hero-float">
+            <span class="label">Estándar HHT</span>
+            <p>"El cambio de paradigma en el mantenimiento de herramientas de corte."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Características -->
+    <section class="features-section" id="caracteristicas">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Ingeniería en Piedra Natural</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card fade-up fade-up-delay-1">
+            <span class="material-symbols-outlined icon">layers</span>
+            <h3>Doble Cara</h3>
+            <p>Diseño de 2 caras que cubre casi todos los aspectos del afilado. Tamaño mediana/grande con 1.8 cm de
+              espesor sólido. Rango de 600 a 12,000.</p>
+          </div>
+          <div class="feature-card fade-up fade-up-delay-2">
+            <span class="material-symbols-outlined icon">texture</span>
+            <h3>Cara Gruesa (Gris)</h3>
+            <span class="grit-badge">600 a 3000 GRIT</span>
+            <p>Ideal para semi desbaste y afilado medio, preparando el acero para la etapa final de precisión.</p>
+          </div>
+          <div class="feature-card fade-up fade-up-delay-3">
+            <span class="material-symbols-outlined icon">auto_awesome</span>
+            <h3>Cara Fina (Ultrafino)</h3>
+            <span class="grit-badge">3000 a 12000 GRIT</span>
+            <p>Afilado fino, pulido espejo y asentado. Logra el legendario estándar HHT (corte de vello en el aire).</p>
+          </div>
+          <div class="feature-card fade-up fade-up-delay-4">
+            <span class="material-symbols-outlined icon">diamond</span>
+            <h3>Dientes Diamantados</h3>
+            <p>Incluye 2 dientes diamantados: Oscuro (grueso) para la cara de 600 y Claro/Azul (fino) para la de 12,000.
+              Generan "barrillo" para acelerar el proceso.</p>
+          </div>
+        </div>
+        <div class="callout fade-up">
+          <span class="material-symbols-outlined icon">shield</span>
+          <div>
+            <h4>Inmunidad a la Deformación: Optimización de CAPEX</h4>
+            <p>A diferencia de las piedras convencionales, Siwhal no requiere ser aplanada (no ahuecamiento). Su dureza
+              extrema evita deformaciones, eliminando la necesidad de adquirir placas de aplanado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tienda (moved up) -->
+    <section class="shop-section" id="tienda">
+      <div class="container">
+        <div class="shop-header fade-up">
+          <div>
+            <h2>Tienda Oficial</h2>
+            <p>Adquiere hoy la herramienta definitiva.</p>
+          </div>
+        </div>
+        <div class="shop-products">
+
+          <div class="shop-product fade-up">
+            <div class="product-badge">EL CAMBIO DE PARADIGMA</div>
+            <div class="shop-carousel" data-carousel="piedra">
+              <div class="carousel-track">
+                <img alt="Piedra Siwhal" src="assets/piedra1.webp" />
+                <img alt="Piedra Siwhal" src="assets/piedra2.webp" />
+                <img alt="Piedra Siwhal" src="assets/piedra3.webp" />
+                <img alt="Piedra Siwhal Dientes" src="assets/dientes1.webp" />
+                <img alt="Piedra Siwhal Dientes" src="assets/dientes2.webp" />
+              </div>
+              <button class="carousel-btn prev" data-carousel-btn="prev" aria-label="Anterior">&#10094;</button>
+              <button class="carousel-btn next" data-carousel-btn="next" aria-label="Siguiente">&#10095;</button>
+              <div class="carousel-dots" data-carousel-dots></div>
+            </div>
+            <div class="shop-content">
+              <div class="shop-info">
+                <h3>Piedra De Afilar Profesional Siwhal</h3>
+                <p>Piedra natural de doble cara + 2 dientes diamantados estratégicos para generar barrillo. La solución
+                  definitiva para un afilado de estándar HHT.</p>
+                <div class="shop-shipping">
+                  <span class="material-symbols-outlined">local_shipping</span>
+                  Envío gratis a todo el país
+                </div>
+                <a class="shop-buy"
+                  href="https://articulo.mercadolibre.com.ar/MLA-1771180633-piedra-de-afilar-profesional-siwhal-_JM?searchVariation=193984561350#polycard_client=recommendations_vip-seller_items-above&reco_backend=ranker-retsys-same-seller&reco_model=rk_entity_sameseller&reco_client=vip-seller_items-above&reco_item_pos=3&reco_backend_type=low_level&reco_id=485a1013-4719-479a-9cba-9660f3c89438"
+                  target="_blank" rel="noopener">
+                  <span class="material-symbols-outlined">shopping_cart</span>
+                  Ver en Mercado Libre
+                </a>
+              </div>
+              <div class="shop-specs">
+                <h3>Especificaciones</h3>
+                <ul>
+                  <li><span class="spec-label">Marca</span><span>Siwhal</span></li>
+                  <li><span class="spec-label">Sistema</span><span>Piedra Natural Doble Cara</span></li>
+                  <li><span class="spec-label">Material</span><span>Piedra Natural de Alta Dureza</span></li>
+                  <li><span class="spec-label">Extras</span><span>2 Dientes Diamantados</span></li>
+                  <li><span class="spec-label">Uso</span><span>Todo tipo de herramientas de corte</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="shop-product fade-up">
+            <div class="product-badge" style="background:var(--inverse-surface);">COLECCIÓN</div>
+            <div class="shop-carousel" data-carousel="navaja">
+              <div class="carousel-track">
+                <img alt="Navaja Lutz Cavalier" src="assets/navaja1.webp" />
+                <img alt="Navaja Lutz Cavalier" src="assets/navaja2.webp" />
+                <img alt="Navaja Lutz Cavalier" src="assets/navaja3.webp" />
+                <img alt="Navaja Lutz Cavalier" src="assets/navaja4.webp" />
+                <img alt="Navaja Lutz Cavalier" src="assets/navaja5.webp" />
+                <img alt="Navaja Lutz Cavalier" src="assets/navaja6.webp" />
+              </div>
+              <button class="carousel-btn prev" data-carousel-btn="prev" aria-label="Anterior">&#10094;</button>
+              <button class="carousel-btn next" data-carousel-btn="next" aria-label="Siguiente">&#10095;</button>
+              <div class="carousel-dots" data-carousel-dots></div>
+            </div>
+            <div class="shop-content">
+              <div class="shop-info">
+                <h3>Navaja De Afeitar Antigua</h3>
+                <p>Navaja barbera Lutz Cavalier número 14, fabricada entre los años 1920-1960 en la ciudad de Solingen
+                  Alemania.</p>
+                <p>Completamente nuevas, en su paquete original, nunca han sido usadas. Stock muy limitado.</p>
+                <a class="shop-buy"
+                  href="https://articulo.mercadolibre.com.ar/MLA-3238201376-navaja-de-afeitar-antigua-_JM#polycard_client=recommendations_vip-seller_items-above&reco_backend=ranker-retsys-same-seller&reco_model=rk_entity_sameseller&reco_client=vip-seller_items-above&reco_item_pos=8&reco_backend_type=low_level&reco_id=3c568ad0-966a-4ddb-a744-5ec3c943cc97&wid=MLA3238201376&sid=recos"
+                  target="_blank" rel="noopener">
+                  <span class="material-symbols-outlined">shopping_cart</span>
+                  Ver en Mercado Libre
+                </a>
+              </div>
+              <div class="shop-specs">
+                <h3>Especificaciones</h3>
+                <ul>
+                  <li><span class="spec-label">Fabricante</span><span>Solingen, Alemania</span></li>
+                  <li><span class="spec-label">Marca</span><span>Lutz Cavalier</span></li>
+                  <li><span class="spec-label">Modelo</span><span>14</span></li>
+                  <li><span class="spec-label">Condición</span><span>Nueva - Packaging original</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Guía Profesional (Infografía + Técnica unificadas) -->
+    <section class="guide-section" id="metodologia">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Sistema Profesional Siwhal</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="guide-grid">
+          <div class="guide-text fade-up">
+            <h3>Técnica de Círculos Concéntricos</h3>
+            <p>La extrema dureza de la piedra natural Siwhal permite la aplicación de movimientos circulares de alta
+              fricción con fuerte presión lateral. Esta técnica, imposible en piedras blandas que se dañarían, acelera
+              dramáticamente el proceso de afilado.</p>
+            <p>Demostrado en pruebas de campo, la técnica ha permitido alcanzar el estándar HHT en navajas "Gold Dollar"
+              en tiempo récord, validando la superioridad técnica del sistema Siwhal sobre métodos tradicionales.</p>
+          </div>
+
+          <div class="technique-visual-side fade-up">
+            <img src="assets/piedra1.webp" alt="Piedra Siwhal Alta Fricción" class="technique-img-side" />
+            <div class="technique-text-side">
+              <span class="material-symbols-outlined icon">cyclone</span>
+              <div>
+                <h4>Movimiento de Alta Fricción</h4>
+                <p>Círculos concéntricos que aprovechan la dureza inalterable de la superficie para un desbaste rápido y
+                  preciso.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-gallery guide-gallery-large fade-up">
+          <figure>
+            <img alt="Kit profesional Siwhal" src="assets/kit profesional.png" />
+            <figcaption>Kit Profesional Completo</figcaption>
+          </figure>
+          <figure>
+            <img alt="Técnica con la piedra Siwhal" src="assets/info-piedra.png" />
+            <figcaption>Técnica de Afilado</figcaption>
+          </figure>
+          <figure>
+            <img alt="Dientes diamantados Siwhal" src="assets/dientes.png" />
+            <figcaption>Dientes Diamantados</figcaption>
+          </figure>
+          <div class="divider"></div>
+        </div>
+        <div class="roi-grid">
+          <div class="roi-card fade-up fade-up-delay-1">
+            <span class="material-symbols-outlined icon">savings</span>
+            <h3>Optimización de CAPEX</h3>
+            <p>Reducción drástica de la inversión inicial al eliminar la necesidad de comprar granos intermedios y
+              herramientas de rectificación.</p>
+          </div>
+          <div class="roi-card fade-up fade-up-delay-2">
+            <span class="material-symbols-outlined icon">inventory_2</span>
+            <h3>Logística Simplificada</h3>
+            <p>La caja de madera robusta minimiza la huella física en el puesto de trabajo y facilita el transporte.</p>
+          </div>
+          <div class="roi-card fade-up fade-up-delay-3">
+            <span class="material-symbols-outlined icon">timer</span>
+            <h3>Eliminación de Tiempos Muertos</h3>
+            <p>Se erradica el proceso improductivo de aplanado. El profesional dedica el 100% de su tiempo al cliente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dientes Diamantados -->
+    <section class="diamonds-section" id="diamantes">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Sustentabilidad con Dientes Diamantados</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="diamonds-grid">
+          <div class="diamond-card fade-up fade-up-delay-1">
+            <span class="material-symbols-outlined icon">cleaning_services</span>
+            <h3>Limpieza y Restauración</h3>
+            <p>Dientes oscuros (gruesos) para la cara 600 y celestes (finos) para la cara 12,000. Eliminan la
+              cristalización.</p>
+          </div>
+          <div class="diamond-card fade-up fade-up-delay-2">
+            <span class="material-symbols-outlined icon">speed</span>
+            <h3>Creación de "Barrillo"</h3>
+            <p>Se genera una suspensión abrasiva que aumenta drásticamente los puntos de corte activos por cm².</p>
+          </div>
+          <div class="diamond-card fade-up fade-up-delay-3">
+            <span class="material-symbols-outlined icon">build</span>
+            <h3>Protocolo de Mantenimiento</h3>
+            <p>Versatilidad total: funciona en seco, con agua como lubricante o mediante aceite mineral.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Especificaciones Técnicas -->
+    <section class="specs-section" id="especificaciones" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Especificaciones Técnicas</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="specs-wrapper fade-up">
+          <table class="specs-table">
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th>Especificación Técnica</th>
+                <th>Ventaja Operativa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Característica">Rango de Granulometría</td>
+                <td data-label="Especificación">600 (Gris) a 12,000 (Ultrafino)</td>
+                <td data-label="Ventaja">Versatilidad total de desbaste y pulido.</td>
+              </tr>
+              <tr>
+                <td data-label="Característica">Estabilidad Estructural</td>
+                <td data-label="Especificación">Composición de alta densidad</td>
+                <td data-label="Ventaja">Inmunidad a deformación; sin rectificado.</td>
+              </tr>
+              <tr>
+                <td data-label="Característica">Ergonomía de Campo</td>
+                <td data-label="Especificación">13 - 14 cm</td>
+                <td data-label="Ventaja">Optimizadas para portabilidad y control.</td>
+              </tr>
+              <tr>
+                <td data-label="Característica">Protección de Activos</td>
+                <td data-label="Especificación">Caja de madera robusta</td>
+                <td data-label="Ventaja">Almacenamiento seguro, previene fracturas.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="results-section" id="resultados">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="label" style="display:block;margin-bottom:0.5rem;">Resultados Estratégicos</span>
+          <h2>Precisión Extrema: Estándar HHT</h2>
+        </div>
+        <p class="fade-up" style="text-align:center;max-width:700px;margin:0 auto 1rem;">El nivel de afilado alcanzado
+          permite superar los estándares convencionales y alcanzar la validación definitiva: el "corte de cabello en el
+          aire" (Hanging Hair Test).</p>
+        <div class="results-grid">
+          <div class="result-card fade-up fade-up-delay-1">
+            <div class="number">↑ ROI</div>
+            <h3>Eficiencia Temporal Crítica</h3>
+            <p>Reducción drástica de los ciclos de mantenimiento, permitiendo mayor rotación de servicios por jornada.
+            </p>
+          </div>
+          <div class="result-card fade-up fade-up-delay-2">
+            <div class="number">-80%</div>
+            <h3>Costos de Capital</h3>
+            <p>Eliminación de inventario redundante y supresión del costo de reemplazo de accesorios de rectificación.
+            </p>
+          </div>
+          <div class="result-card fade-up fade-up-delay-3">
+            <div class="number">HHT</div>
+            <h3>Calidad Superior</h3>
+            <p>Capacidad constante de ejecutar cortes "en el aire", elevando el valor percibido del servicio y
+              satisfacción del cliente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact-section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-info fade-up">
+          <h2>Contáctanos</h2>
+          <p>¿Tienes dudas sobre la técnica de afilado o quieres saber más sobre nuestras piedras naturales? Nuestro
+            equipo de maestros afiladores está listo para asesorarte.</p>
+          <div class="contact-detail">
+            <span class="material-symbols-outlined icon">mail</span>
+            <span>contacto@siwhal.com</span>
+          </div>
+          <div class="contact-detail">
+            <span class="material-symbols-outlined icon">location_on</span>
+            <span>Taller de Afilado Artesanal, Siwhal</span>
+          </div>
+        </div>
+        <form class="contact-form fade-up" id="contactForm" action="https://formspree.io/f/mgodjkaw" method="POST">
+          <input type="hidden" name="_subject" value="Consulta desde siwhal-page" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <input type="text" name="nombre" placeholder="Nombre completo" required />
+          <input type="email" name="email" placeholder="Correo electrónico" required />
+          <textarea name="mensaje" rows="4" placeholder="Tu mensaje o consulta técnica"></textarea>
+          <button type="submit" class="btn-dark" style="align-self:flex-start;">Enviar Consulta</button>
+        </form>
+        <div id="formSuccess" class="toast-success">
+          <span class="material-symbols-outlined icon">check_circle</span>
+          <div>
+            <p style="font-weight:600;margin-bottom:0.25rem;">¡Consulta enviada!</p>
+            <p style="font-size:0.9rem;color:var(--surface);">Te responderemos a la brevedad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">SIWHAL</div>
+        <p>Elevando el acto utilitario del afilado a una disciplina de alta precisión y arte.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/siwhalpiedras/" target="_blank" rel="noopener" class="social-icon"
+            aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@siwhalpiedrasdeafilar" target="_blank" rel="noopener" class="social-icon"
+            aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+          <a href="https://wa.me/5492216158325?text=Hola!%20Tengo%20una%20consulta%20sobre%20las%20piedras"
+            target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Enlaces Rápidos</h4>
+        <a href="#caracteristicas">Características</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#metodologia">Técnica</a>
+        <a href="#informe">Informe</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div>
+        <h4>Contacto Directo</h4>
+        <a href="https://wa.me/5492216158325?text=Hola!%20Tengo%20una%20consulta%20sobre%20las%20piedras"
+          target="_blank" rel="noopener" class="footer-whatsapp">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Escribinos por WhatsApp
+        </a>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:0.5rem;">Respuesta rápida</p>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2026 Siwhal Piedras de Afilar. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="image-modal">
+    <span class="close-modal material-symbols-outlined">close</span>
+    <button class="modal-prev material-symbols-outlined">chevron_left</button>
+    <img class="modal-content" id="modalImage">
+    <button class="modal-next material-symbols-outlined">chevron_right</button>
   </div>
-</footer>
 
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" aria-label="Volver arriba">
-  <span class="material-symbols-outlined">arrow_upward</span>
-</button>
+  <script>
+    // Mobile menu
+    const toggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
 
-<!-- Image Modal -->
-<div id="imageModal" class="image-modal">
-  <span class="close-modal material-symbols-outlined">close</span>
-  <button class="modal-prev material-symbols-outlined">chevron_left</button>
-  <img class="modal-content" id="modalImage">
-  <button class="modal-next material-symbols-outlined">chevron_right</button>
-</div>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
 
-<script>
-// Mobile menu
-const toggle = document.getElementById('menuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-});
-mobileMenu.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    toggle.classList.remove('open');
-    mobileMenu.classList.remove('open');
-  });
-});
+    // Active nav link
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+      });
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      });
+    });
 
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
-});
+    // GSAP Antigravity Animations
+    gsap.registerPlugin(ScrollTrigger);
 
-// Active nav link
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
-  });
-  navLinks.forEach(a => {
-    a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
-  });
-});
+    // Hero parallax
+    gsap.to('.hero-visual', { y: -50, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
 
-// GSAP Antigravity Animations
-gsap.registerPlugin(ScrollTrigger);
+    // Hero image straightening
+    gsap.to('.hero-img-wrap', {
+      rotateY: 0,
+      rotateX: 0,
+      duration: 1.5,
+      ease: 'power2.inOut',
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top 20%',
+        end: 'bottom 40%',
+        scrub: 1
+      }
+    });
 
-// Hero parallax
-gsap.to('.hero-visual', { y: -50, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+    // Global Section Fade-in
+    gsap.utils.toArray('section').forEach(section => {
+      if (section.id === 'inicio') return; // Skip hero as it has its own logic
+      gsap.fromTo(section,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+    });
 
-// Fade-up for individual elements (not inside grids)
-document.querySelectorAll('.fade-up').forEach((el) => {
-  if (el.closest('.features-grid') || el.closest('.roi-grid') || el.closest('.diamonds-grid') || el.closest('.results-grid')) return;
-  gsap.fromTo(el, { opacity: 0, y: 50, rotationX: 5 }, { opacity: 1, y: 0, rotationX: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } });
-});
+    // Fade-up for individual elements (keeping existing staggered logic)
+    document.querySelectorAll('.fade-up').forEach((el) => {
+      if (el.closest('.features-grid') || el.closest('.roi-grid') || el.closest('.diamonds-grid') || el.closest('.results-grid')) return;
+      gsap.fromTo(el, { opacity: 0, y: 50, rotationX: 5 }, { opacity: 1, y: 0, rotationX: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } });
+    });
 
-// Staggered grid animations
-['.features-grid', '.roi-grid', '.diamonds-grid', '.results-grid'].forEach(grid => {
-  const cards = document.querySelectorAll(`${grid} > div`);
-  if (cards.length > 0) {
-    gsap.fromTo(cards, { opacity: 0, y: 40, rotationY: -10 }, { opacity: 1, y: 0, rotationY: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: { trigger: grid, start: 'top 80%' } });
-  }
-});
+    // Staggered grid animations
+    ['.features-grid', '.roi-grid', '.diamonds-grid', '.results-grid'].forEach(grid => {
+      const cards = document.querySelectorAll(`${grid} > div`);
+      if (cards.length > 0) {
+        gsap.fromTo(cards, { opacity: 0, y: 40, rotationY: -10 }, { opacity: 1, y: 0, rotationY: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: { trigger: grid, start: 'top 80%' } });
+      }
+    });
 
-// Section-specific scroll animations
-// Technique visual spin-in
-gsap.fromTo('.technique-visual', { opacity: 0, scale: 0.8, rotation: -5 }, { opacity: 1, scale: 1, rotation: 2, duration: 1.2, ease: 'back.out(1.5)', scrollTrigger: { trigger: '.technique-visual', start: 'top 80%' } });
-// Technique text slide
-gsap.fromTo('.guide-text', { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.guide-text', start: 'top 80%' } });
-gsap.fromTo('.guide-gallery figure', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: { trigger: '.guide-gallery', start: 'top 85%' } });
-gsap.fromTo('.technique-visual', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 1.2, ease: 'power2.out', scrollTrigger: { trigger: '.technique-visual', start: 'top 80%' } });
+    // Section-specific scroll animations
+    // Technique visual spin-in (Now ends at 0 rotation to straighten it)
+    gsap.fromTo('.technique-visual-side', { opacity: 0, scale: 0.8, rotation: -10 }, { opacity: 1, scale: 1, rotation: 0, duration: 1.5, ease: 'back.out(1.2)', scrollTrigger: { trigger: '.technique-visual-side', start: 'top 85%' } });
 
-// Specs table rows
-gsap.fromTo('.specs-table tbody tr', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out', scrollTrigger: { trigger: '.specs-table', start: 'top 80%' } });
+    // Technique text slide
+    gsap.fromTo('.guide-text', { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.guide-text', start: 'top 80%' } });
+    gsap.fromTo('.guide-gallery figure', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: { trigger: '.guide-gallery', start: 'top 85%' } });
 
-// Shop products slide-up with 3D
-document.querySelectorAll('.shop-product').forEach((product, i) => {
-  gsap.fromTo(product, { opacity: 0, y: 80, rotateX: 8 }, { opacity: 1, y: 0, rotateX: 0, duration: 1.2, delay: i * 0.2, ease: 'power3.out', scrollTrigger: { trigger: product, start: 'top 85%' } });
-});
+    // Specs table rows
+    gsap.fromTo('.specs-table tbody tr', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out', scrollTrigger: { trigger: '.specs-table', start: 'top 80%' } });
 
-// Results section numbers count-up effect
-document.querySelectorAll('.result-card .number').forEach(el => {
-  gsap.fromTo(el, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(2)', scrollTrigger: { trigger: el, start: 'top 85%' } });
-});
+    // Shop products slide-up with 3D
+    document.querySelectorAll('.shop-product').forEach((product, i) => {
+      gsap.fromTo(product, { opacity: 0, y: 80, rotateX: 8 }, { opacity: 1, y: 0, rotateX: 0, duration: 1.2, delay: i * 0.2, ease: 'power3.out', scrollTrigger: { trigger: product, start: 'top 85%' } });
+    });
 
-// Callout slide from left
-gsap.fromTo('.callout', { opacity: 0, x: -60, rotation: 0 }, { opacity: 1, x: 0, rotation: -0.5, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.callout', start: 'top 85%' } });
+    // Results section numbers count-up effect
+    document.querySelectorAll('.result-card .number').forEach(el => {
+      gsap.fromTo(el, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(2)', scrollTrigger: { trigger: el, start: 'top 85%' } });
+    });
 
-// Contact form slide-in
-gsap.fromTo('.contact-form', { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.contact-form', start: 'top 85%' } });
-gsap.fromTo('.contact-info', { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.contact-info', start: 'top 85%' } });
+    // Callout slide from left and straightening
+    gsap.fromTo('.callout', { opacity: 0, x: -60, rotation: -2 }, { opacity: 1, x: 0, rotation: 0, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: '.callout', start: 'top 85%' } });
 
-// Footer fade-in
-gsap.fromTo('.footer-grid > div', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: { trigger: '.footer', start: 'top 90%' } });
+    // Contact form slide-in
+    gsap.fromTo('.contact-form', { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.contact-form', start: 'top 85%' } });
+    gsap.fromTo('.contact-info', { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.contact-info', start: 'top 85%' } });
 
-// Back to top
-const btn = document.getElementById('backToTop');
-window.addEventListener('scroll', () => { btn.classList.toggle('visible', window.scrollY > 500); });
-btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    // Footer fade-in
+    gsap.fromTo('.footer-grid > div', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: { trigger: '.footer', start: 'top 90%' } });
 
-// Contact form
-const contactForm = document.getElementById('contactForm');
-const formSuccess = document.getElementById('formSuccess');
-contactForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const submitBtn = contactForm.querySelector('button[type="submit"]');
-  submitBtn.disabled = true; submitBtn.textContent = 'Enviando...';
-  try {
-    const resp = await fetch(contactForm.action, { method: 'POST', body: new FormData(contactForm), headers: { 'Accept': 'application/json' } });
-    if (resp.ok) { contactForm.reset(); formSuccess.classList.add('show'); setTimeout(() => formSuccess.classList.remove('show'), 4000); }
-    else { alert('Error al enviar. Intentá de nuevo.'); }
-  } catch { alert('Error de conexión. Verificá tu internet.'); }
-  submitBtn.disabled = false; submitBtn.textContent = 'Enviar Consulta';
-});
+    // Back to top
+    const btn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => { btn.classList.toggle('visible', window.scrollY > 500); });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// Modal
-const imageModal = document.getElementById('imageModal');
-const modalImage = document.getElementById('modalImage');
-const closeModal = document.querySelector('.close-modal');
-const modalPrev = document.querySelector('.modal-prev');
-const modalNext = document.querySelector('.modal-next');
-let modalContext = null;
+    // Contact form
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true; submitBtn.textContent = 'Enviando...';
+      try {
+        const resp = await fetch(contactForm.action, { method: 'POST', body: new FormData(contactForm), headers: { 'Accept': 'application/json' } });
+        if (resp.ok) { contactForm.reset(); formSuccess.classList.add('show'); setTimeout(() => formSuccess.classList.remove('show'), 4000); }
+        else { alert('Error al enviar. Intentá de nuevo.'); }
+      } catch { alert('Error de conexión. Verificá tu internet.'); }
+      submitBtn.disabled = false; submitBtn.textContent = 'Enviar Consulta';
+    });
 
-if (closeModal) {
-  closeModal.addEventListener('click', () => imageModal.classList.remove('show'));
-  imageModal.addEventListener('click', (e) => {
-    if (e.target === imageModal) imageModal.classList.remove('show');
-  });
-}
+    // Modal
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.querySelector('.close-modal');
+    const modalPrev = document.querySelector('.modal-prev');
+    const modalNext = document.querySelector('.modal-next');
+    let modalContext = null;
 
-function modalNavigate(dir) {
-  if (!modalContext) return;
-  const { slides } = modalContext;
-  modalContext.current = (modalContext.current + dir + slides.length) % slides.length;
-  modalImage.src = slides[modalContext.current].src;
-}
-
-if (modalPrev) modalPrev.addEventListener('click', () => modalNavigate(-1));
-if (modalNext) modalNext.addEventListener('click', () => modalNavigate(1));
-
-document.addEventListener('keydown', (e) => {
-  if (!imageModal.classList.contains('show')) return;
-  if (e.key === 'Escape') imageModal.classList.remove('show');
-  if (e.key === 'ArrowLeft') modalNavigate(-1);
-  if (e.key === 'ArrowRight') modalNavigate(1);
-});
-
-document.querySelectorAll('[data-carousel]').forEach((carousel) => {
-  const track = carousel.querySelector('.carousel-track');
-  const slides = track.querySelectorAll('img');
-  const prevBtn = carousel.querySelector('[data-carousel-btn="prev"]');
-  const nextBtn = carousel.querySelector('[data-carousel-btn="next"]');
-  const dotsContainer = carousel.querySelector('[data-carousel-dots]');
-  let current = 0;
-
-  if (slides.length < 2) { prevBtn?.remove(); nextBtn?.remove(); }
-
-  slides.forEach((slide, i) => {
-    const dot = document.createElement('span');
-    dot.addEventListener('click', () => goTo(i));
-    dotsContainer.appendChild(dot);
-  });
-  const dots = dotsContainer.querySelectorAll('span');
-
-  // Open modal on click (bound to carousel so it works anywhere)
-  carousel.addEventListener('click', (e) => {
-    if (e.target.closest('.carousel-btn') || e.target.closest('.carousel-dots')) return;
-    if (slides[current]) {
-      modalImage.src = slides[current].src;
-      modalContext = { slides, current };
-      imageModal.classList.add('show');
+    if (closeModal) {
+      closeModal.addEventListener('click', () => imageModal.classList.remove('show'));
+      imageModal.addEventListener('click', (e) => {
+        if (e.target === imageModal) imageModal.classList.remove('show');
+      });
     }
-  });
 
-  function goTo(index) {
-    current = (index + slides.length) % slides.length;
-    track.style.transform = 'translateX(-' + (current * 100) + '%)';
-    dots.forEach((d, i) => d.classList.toggle('active', i === current));
-  }
-  prevBtn?.addEventListener('click', () => goTo(current - 1));
-  nextBtn?.addEventListener('click', () => goTo(current + 1));
-  // Touch swipe
-  let touchStartX = 0;
-  carousel.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-  carousel.addEventListener('touchend', (e) => {
-    const diff = touchStartX - e.changedTouches[0].screenX;
-    if (Math.abs(diff) > 40) {
-      diff > 0 ? nextBtn?.click() : prevBtn?.click();
+    function modalNavigate(dir) {
+      if (!modalContext) return;
+      const { slides } = modalContext;
+      modalContext.current = (modalContext.current + dir + slides.length) % slides.length;
+      modalImage.src = slides[modalContext.current].src;
     }
-  }, { passive: true });
 
-  goTo(0);
-});
-</script>
+    if (modalPrev) modalPrev.addEventListener('click', () => modalNavigate(-1));
+    if (modalNext) modalNext.addEventListener('click', () => modalNavigate(1));
+
+    document.addEventListener('keydown', (e) => {
+      if (!imageModal.classList.contains('show')) return;
+      if (e.key === 'Escape') imageModal.classList.remove('show');
+      if (e.key === 'ArrowLeft') modalNavigate(-1);
+      if (e.key === 'ArrowRight') modalNavigate(1);
+    });
+
+    document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+      const track = carousel.querySelector('.carousel-track');
+      const slides = track.querySelectorAll('img');
+      const prevBtn = carousel.querySelector('[data-carousel-btn="prev"]');
+      const nextBtn = carousel.querySelector('[data-carousel-btn="next"]');
+      const dotsContainer = carousel.querySelector('[data-carousel-dots]');
+      let current = 0;
+
+      if (slides.length < 2) { prevBtn?.remove(); nextBtn?.remove(); }
+
+      slides.forEach((slide, i) => {
+        const dot = document.createElement('span');
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      });
+      const dots = dotsContainer.querySelectorAll('span');
+
+      // Open modal on click (bound to carousel so it works anywhere)
+      carousel.addEventListener('click', (e) => {
+        if (e.target.closest('.carousel-btn') || e.target.closest('.carousel-dots')) return;
+        if (slides[current]) {
+          modalImage.src = slides[current].src;
+          modalContext = { slides, current };
+          imageModal.classList.add('show');
+        }
+      });
+
+      function goTo(index) {
+        current = (index + slides.length) % slides.length;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+      prevBtn?.addEventListener('click', () => goTo(current - 1));
+      nextBtn?.addEventListener('click', () => goTo(current + 1));
+      // Touch swipe
+      let touchStartX = 0;
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      carousel.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 40) {
+          diff > 0 ? nextBtn?.click() : prevBtn?.click();
+        }
+      }, { passive: true });
+
+      goTo(0);
+    });
+  </script>
 
 </body>
+
 </html>
