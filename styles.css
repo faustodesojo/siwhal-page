@@ -435,10 +435,84 @@ section { padding: 5rem 0; position: relative; }
 .shop-header h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
 .shop-header p { color: var(--on-surface-variant); font-size: 1.1rem; }
 
-.shop-products { display: flex; flex-direction: column; gap: 5rem; perspective: 1500px; }
+.catalog-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.book-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface-container-high);
+  border: var(--retro-border);
+  padding: 0.5rem 1rem;
+  box-shadow: 4px 4px 0px rgba(92,64,59,0.15);
+}
+
+.btn-book {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-book:hover:not(:disabled) {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.btn-book:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--on-surface-variant);
+  letter-spacing: 0.1em;
+}
+
+.book-container { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr;
+  perspective: 2000px; 
+}
+
+.book-page {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transform-style: preserve-3d;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.book-page.active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  z-index: 5;
+}
 
 .shop-product {
-  max-width: 900px; margin: 0 auto; width: 100%;
+  /* max-width: 900px; margin: 0 auto; width: 100%; removed because it is now inside grid */
+  width: 100%;
   background: var(--glass-bg); backdrop-filter: var(--glass-blur);
   border: var(--retro-border); box-shadow: 12px 12px 0px rgba(92,64,59,0.15);
   position: relative; display: grid; grid-template-columns: 1fr;
