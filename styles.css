@@ -440,8 +440,6 @@ section { padding: 5rem 0; position: relative; }
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .book-controls {
@@ -452,6 +450,9 @@ section { padding: 5rem 0; position: relative; }
   border: var(--retro-border);
   padding: 0.5rem 1rem;
   box-shadow: 4px 4px 0px rgba(92,64,59,0.15);
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .btn-book {
@@ -490,6 +491,7 @@ section { padding: 5rem 0; position: relative; }
   display: grid; 
   grid-template-columns: 1fr; 
   grid-template-rows: 1fr;
+  align-items: start;
   perspective: 2000px; 
 }
 
@@ -511,8 +513,7 @@ section { padding: 5rem 0; position: relative; }
 }
 
 .shop-product {
-  /* max-width: 900px; margin: 0 auto; width: 100%; removed because it is now inside grid */
-  width: 100%;
+  max-width: 900px; margin: 0 auto; width: 100%;
   background: var(--glass-bg); backdrop-filter: var(--glass-blur);
   border: var(--retro-border); box-shadow: 12px 12px 0px rgba(92,64,59,0.15);
   position: relative; display: grid; grid-template-columns: 1fr;
