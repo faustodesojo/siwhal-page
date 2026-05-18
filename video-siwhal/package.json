@@ -1,0 +1,11 @@
+{
+  "name": "video-siwhal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.6.19 preview",
+    "check": "npx --yes hyperframes@0.6.19 lint && npx --yes hyperframes@0.6.19 validate && npx --yes hyperframes@0.6.19 inspect",
+    "render": "npx --yes hyperframes@0.6.19 render",
+    "publish": "npx --yes hyperframes@0.6.19 publish"
+  }
+}

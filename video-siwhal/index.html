@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0d0d0d;
+        font-family: 'Hanken Grotesk', sans-serif;
+      }
+
+      :root {
+        --primary: #870000;
+        --accent: #ff6b6b;
+        --bg: #0d0d0d;
+        --surface: #1a1a1a;
+        --text: #ffffff;
+        --text-secondary: #b8b4b0;
+      }
+
+      #root {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .clip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 160px;
+      }
+
+      .scene-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+        max-width: 1200px;
+      }
+
+      .text-white { color: var(--text); }
+      .text-accent { color: var(--accent); }
+      .text-secondary { color: var(--text-secondary); }
+
+      .title-lg {
+        font-family: 'Libre Caslon Text', serif;
+        font-size: 100px;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+      
+      .title-md {
+        font-family: 'Libre Caslon Text', serif;
+        font-size: 80px;
+        font-weight: 700;
+      }
+
+      .title-sm {
+        font-family: 'Libre Caslon Text', serif;
+        font-size: 64px;
+        font-weight: 700;
+      }
+
+      .text-xl { font-size: 32px; }
+      .text-lg { font-size: 28px; }
+      .text-md { font-size: 24px; }
+      .text-sm { font-size: 20px; }
+
+      .uppercase { text-transform: uppercase; }
+      .letter-space { letter-spacing: 0.1em; }
+      .italic { font-style: italic; }
+      .bold { font-weight: 700; }
+
+      /* Features */
+      .grit-badge {
+        display: flex;
+        gap: 24px;
+        margin-top: 24px;
+      }
+
+      .grit-item {
+        background: var(--surface);
+        border: 2px solid var(--primary);
+        padding: 20px 40px;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .grit-arrow { color: var(--accent); margin: 0 8px; }
+
+      /* Cards */
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 32px;
+      }
+
+      .card {
+        background: var(--surface);
+        padding: 40px;
+        border: 2px solid var(--primary);
+        text-align: center;
+      }
+
+      .card-icon {
+        font-size: 64px;
+        color: var(--accent);
+        margin-bottom: 16px;
+      }
+
+      .card h4 {
+        font-size: 28px;
+        margin-bottom: 12px;
+      }
+
+      /* Stats */
+      .stat-number {
+        font-family: 'Libre Caslon Text', serif;
+        font-size: 160px;
+        font-weight: 700;
+        color: var(--accent);
+        line-height: 1;
+      }
+
+      .stat-label {
+        font-size: 36px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-top: 16px;
+      }
+
+      /* Deco */
+      .glow {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+        opacity: 0.12;
+        filter: blur(80px);
+      }
+      
+      .glow-center { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+      .glow-top-right { top: -150px; right: -150px; }
+      .glow-bottom-left { bottom: -150px; left: -150px; }
+
+      .line-deco {
+        position: absolute;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        opacity: 0.5;
+        left: 10%; right: 10%;
+      }
+      .line-top { top: 60px; }
+      .line-bottom { bottom: 60px; }
+
+      /* Progress */
+      .progress {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 6px;
+        background: var(--primary);
+        width: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="30"
+      data-width="1920"
+      data-height="1080"
+    >
+
+      <!-- SCENE 1: Hook (0-5s) -->
+      <div class="clip" id="scene1" data-start="0" data-duration="5" data-track-index="1">
+        <div class="glow glow-center"></div>
+        <div class="line-deco line-top"></div>
+        <div class="line-deco line-bottom"></div>
+        <div class="scene-content">
+          <p class="text-sm uppercase letter-space text-secondary">¿Por qué elegir Siwhal?</p>
+          <h1 class="title-lg text-white">
+            Una piedra.<br><span class="text-accent">Todos los resultados.</span>
+          </h1>
+          <p class="text-xl text-secondary">La única piedra natural con tecnología de doble cara.</p>
+        </div>
+      </div>
+
+      <!-- SCENE 2: Doble Cara (5-12s) -->
+      <div class="clip" id="scene2" data-start="5" data-duration="7" data-track-index="1">
+        <div class="glow glow-top-right"></div>
+        <div class="glow glow-bottom-left"></div>
+        <div class="scene-content">
+          <h2 class="title-md text-white">Doble Cara, Doble Potencia</h2>
+          <p class="text-lg text-secondary">Una sola piedra cubre todo el proceso de afilado.</p>
+          <div class="grit-badge">
+            <div class="grit-item">600 <span class="grit-arrow">→</span> 3000</div>
+            <div class="grit-item">3000 <span class="grit-arrow">→</span> 12000</div>
+          </div>
+          <p class="text-md text-secondary" style="margin-top: 16px;">Grit en una misma piedra</p>
+        </div>
+      </div>
+
+      <!-- SCENE 3: Dientes (12-19s) -->
+      <div class="clip" id="scene3" data-start="12" data-duration="7" data-track-index="1">
+        <div class="glow glow-center"></div>
+        <div class="scene-content">
+          <h2 class="title-md text-white">Incluye Dientes Diamantados</h2>
+          <div class="grid-3">
+            <div class="card">
+              <span class="material-symbols-outlined card-icon">auto_awesome</span>
+              <h4 class="text-white">Oscuro</h4>
+              <p class="text-secondary">Cara 600<br>Desbaste rápido</p>
+            </div>
+            <div class="card">
+              <span class="material-symbols-outlined card-icon">diamond</span>
+              <h4 class="text-white">Claro</h4>
+              <p class="text-secondary">Cara 12000<br>Pulido final</p>
+            </div>
+            <div class="card">
+              <span class="material-symbols-outlined card-icon">speed</span>
+              <h4 class="text-white">Barrillo</h4>
+              <p class="text-secondary">Más puntos<br>de corte</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENE 4: No Aplanado (19-25s) -->
+      <div class="clip" id="scene4" data-start="19" data-duration="6" data-track-index="1">
+        <div class="glow glow-center"></div>
+        <div class="scene-content">
+          <div class="stat-number">0%</div>
+          <div class="stat-label text-white">Aplanado Necesario</div>
+          <p class="text-lg text-secondary" style="max-width: 600px; margin-top: 20px;">
+            Dureza extrema = inmunidad a deformación. Optimizá tu inversión.
+          </p>
+        </div>
+      </div>
+
+      <!-- SCENE 5: CTA (25-30s) -->
+      <div class="clip" id="scene5" data-start="25" data-duration="5" data-track-index="1">
+        <div class="glow glow-center"></div>
+        <div class="line-deco line-top"></div>
+        <div class="line-deco line-bottom"></div>
+        <div class="scene-content">
+          <h1 class="title-lg text-white" style="font-size: 140px;">SIWHAL</h1>
+          <p class="text-xl text-secondary italic">El estándar HHT en cada pasada.</p>
+          <p class="text-lg text-accent uppercase bold letter-space" style="margin-top: 32px;">
+            Transformá tu taller. Elevá tu técnica.
+          </p>
+        </div>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="clip" id="progress" data-start="0" data-duration="30" data-track-index="10" style="align-items: flex-end;">
+        <div style="width: 100%; height: 6px; background: var(--primary);" id="progress-bar"></div>
+      </div>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Progress bar
+      tl.to('#progress-bar', { width: '100%', duration: 30, ease: 'none' }, 0);
+
+      // Scene 1: Hook
+      tl.fromTo('#scene1', { opacity: 0 }, { opacity: 1, duration: 0.5 }, 0.3);
+      tl.fromTo('#scene1 .text-secondary', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, 0.5);
+      tl.fromTo('#scene1 .title-lg', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, 0.8);
+      tl.fromTo('#scene1 .line-deco', { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'power2.out' }, 1.2);
+
+      // Scene 2: Doble Cara
+      tl.fromTo('#scene2', { opacity: 0 }, { opacity: 1, duration: 0.5 }, 5);
+      tl.fromTo('#scene2 .title-md', { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' }, 5.5);
+      tl.fromTo('#scene2 .text-secondary', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 6.2);
+      tl.fromTo('#scene2 .grit-badge', { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(1.2)' }, 7);
+      tl.fromTo('#scene2 .grit-item', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.15, ease: 'power2.out' }, 7.3);
+
+      // Scene 3: Dientes
+      tl.fromTo('#scene3', { opacity: 0 }, { opacity: 1, duration: 0.5 }, 12);
+      tl.fromTo('#scene3 .title-md', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' }, 12.5);
+      tl.fromTo('#scene3 .card', { y: 40, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.5, stagger: 0.12, ease: 'power2.out' }, 13.2);
+
+      // Scene 4: No Aplanado
+      tl.fromTo('#scene4', { opacity: 0 }, { opacity: 1, duration: 0.5 }, 19);
+      tl.fromTo('#scene4 .stat-number', { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: 'elastic.out(1, 0.5)' }, 19.5);
+      tl.fromTo('#scene4 .stat-label', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 20.3);
+      tl.fromTo('#scene4 .text-secondary', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 20.8);
+
+      // Scene 5: CTA
+      tl.fromTo('#scene5', { opacity: 0 }, { opacity: 1, duration: 0.5 }, 25);
+      tl.fromTo('#scene5 .title-lg', { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, 25.5);
+      tl.fromTo('#scene5 .italic', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 26.3);
+      tl.fromTo('#scene5 .bold', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 26.8);
+      tl.fromTo('#scene5 .line-deco', { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'power2.out' }, 27.2);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
